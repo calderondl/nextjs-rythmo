@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 const prisma = new PrismaClient()
 
-export default function atletas(props) {
+export default function Atletas(props) {
     const [disable, setDisable] = useState(false)
     const [logged, setLogged] = useState(false)
     const [errorLogged, setErrorLogged] = useState(null)
