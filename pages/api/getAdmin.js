@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient()
 
@@ -14,6 +14,6 @@ export default async (req, res)=>{
         res.status(200).json(result)
       } catch (err) {
         console.log(err)
-        res.status(403).json({ err: "Error occured while retrieving." })
+        res.status(403).json({ err: 'Error occured while retrieving.' })
       }    
 }

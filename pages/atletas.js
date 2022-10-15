@@ -25,7 +25,7 @@ export default function Atletas(props) {
     }
 
     async function deleteAthelte(athlete) {
-        if (window.confirm("¿Está seguro que desea eliminar este atleta?")) {
+        if (window.confirm('¿Está seguro que desea eliminar este atleta?')) {
             await axios.post('api/deleteAthlete', { id: athlete.id })
             router.replace(router.asPath)
         }
