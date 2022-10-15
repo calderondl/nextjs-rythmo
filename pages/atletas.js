@@ -138,7 +138,7 @@ export default function Atletas(props) {
                 </>
             ) : (
                 <>
-                    <h1 className='text-3xl text-center'>Sección especial para la administración del El Gimansio</h1>
+                    <h1 className='text-3xl text-center'>Sección especial para la administración del El Gimansio.</h1>
                     <div className='flex justify-center mt-3'>
                     <div className='w-1/4'>
                         <p className='text-red-400 font-bold'>{errorLogged ? errorLogged : null}</p>
