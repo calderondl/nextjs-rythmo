@@ -11,8 +11,7 @@ export default function NavBar() {
                     </Link>
                 </div>
                 <ul className='flex gap-4 text-lg font-semibold items-center'>
-                    <ActiveLink href='/atletas'>Atletas</ActiveLink>
-                    {/* <ActiveLink href='/estadisticas'>Estadísticas</ActiveLink> */}
+                    <ActiveLink href='/atletas'>Atletas</ActiveLink>                    
                     <ActiveLink href='/login'>Login</ActiveLink>
                 </ul>
             </nav>

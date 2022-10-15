@@ -63,7 +63,7 @@ export default function Login() {
         <div className='text-center'>
             <h1 className='text-bold text-3xl'>Sección especial para uso de los Atletas</h1>
             <div className='flex justify-center'>
-                <p className='max-w-4xl text-justify p-2'>En está sección podrá conectarse al módulo de reproducción de El Gimnasio por medio del servicio de música de streaming 'Spotify'. De manera que, disrutará de su música favorita dentro de las instalaciones y podrá compartir sus gustos musicales con sus compañeros. Asimismo, tendrá la opción de registrar sus avances físicos como su retroalimentación sobre el servicio de música inteligente brindado por medio de los servicios de 'Google Forms', con el objetivo de poder brindarle un mejor servicio.</p>
+                <p className='max-w-4xl text-justify p-2'>En está sección podrá conectarse al módulo de reproducción de El Gimnasio por medio del servicio de música de streaming Spotify. De manera que, disrutará de su música favorita dentro de las instalaciones y podrá compartir sus gustos musicales con sus compañeros. Asimismo, tendrá la opción de registrar sus avances físicos como su retroalimentación sobre el servicio de música inteligente brindado por medio de los servicios de Google Forms, con el objetivo de poder brindarle un mejor servicio.</p>
             </div>
             {
                 !token ? (
