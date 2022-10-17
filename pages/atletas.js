@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import axios from 'axios';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import AddAthlete from '../components/AddAthlete';
 import EditAthlete from '../components/EditAthlete';
 import { useRouter } from 'next/router';
@@ -9,15 +9,15 @@ import { useRouter } from 'next/router';
 const prisma = new PrismaClient()
 
 export default function Atletas(props) {
-        // const [disable, setDisable] = useState(false)
-        // const [logged, setLogged] = useState(false)
-        // const [errorLogged, setErrorLogged] = useState(null)
-        // const [showAddAthleteModal, setShowAddAthleteModal] = useState(false)
-        // const [showEditAthleteModal, setShowEditthleteModal] = useState(false)
-        // const [currentAthlete, setCurrentAthlete] = useState(null)
-        // const athletes = props.athletes
-        // const router = useRouter()
-        // const formRef = useRef()
+    // const [disable, setDisable] = useState(false)
+    // const [logged, setLogged] = useState(false)
+    // const [errorLogged, setErrorLogged] = useState(null)
+    // const [showAddAthleteModal, setShowAddAthleteModal] = useState(false)
+    // const [showEditAthleteModal, setShowEditthleteModal] = useState(false)
+    // const [currentAthlete, setCurrentAthlete] = useState(null)
+    // const athletes = props.athletes
+    // const router = useRouter()
+    // const formRef = useRef()
 
     //     function editTrigger(athlete) {
     //         setCurrentAthlete(athlete)
@@ -170,10 +170,16 @@ export default function Atletas(props) {
 }
 
 export async function getServerSideProps() {
-    const allAthletes = await prisma.athlete.findMany()
-    return {
-        props: {
-            athletes: allAthletes
+
+    try {
+        const allAthletes = await prisma.athlete.findMany()
+        return {
+            props: {
+                athletes: allAthletes
+            }
         }
+    } catch (e) {
+        console.error(e)
     }
+
 }
