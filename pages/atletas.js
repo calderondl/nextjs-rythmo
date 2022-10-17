@@ -9,15 +9,15 @@ import { useRouter } from 'next/router';
 const prisma = new PrismaClient()
 
 export default function Atletas(props) {
-        const [disable, setDisable] = useState(false)
-        const [logged, setLogged] = useState(false)
-        const [errorLogged, setErrorLogged] = useState(null)
-        const [showAddAthleteModal, setShowAddAthleteModal] = useState(false)
-        const [showEditAthleteModal, setShowEditthleteModal] = useState(false)
-        const [currentAthlete, setCurrentAthlete] = useState(null)
-        const athletes = props.athletes
-        const router = useRouter()
-        const formRef = useRef()
+        // const [disable, setDisable] = useState(false)
+        // const [logged, setLogged] = useState(false)
+        // const [errorLogged, setErrorLogged] = useState(null)
+        // const [showAddAthleteModal, setShowAddAthleteModal] = useState(false)
+        // const [showEditAthleteModal, setShowEditthleteModal] = useState(false)
+        // const [currentAthlete, setCurrentAthlete] = useState(null)
+        // const athletes = props.athletes
+        // const router = useRouter()
+        // const formRef = useRef()
 
     //     function editTrigger(athlete) {
     //         setCurrentAthlete(athlete)
