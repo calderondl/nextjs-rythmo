@@ -9,8 +9,8 @@ import { useRouter } from 'next/router';
 
 const prisma = new PrismaClient()
 
-export default function atletas(props) {    
-    const athletes = props.athletes    
+export default function atletas({allAthletes}) {    
+    // const athletes = props.athletes    
     // const [disable, setDisable] = useState(false)
     // const [logged, setLogged] = useState(false)
     // const [errorLogged, setErrorLogged] = useState(null)
@@ -166,7 +166,7 @@ export default function atletas(props) {
     //     );
 
     return (
-        <Atletas />
+        <h1>hola</h1>
     );
 }
 
@@ -174,9 +174,7 @@ export async function getServerSideProps() {
     try {
         const allAthletes = await prisma.athlete.findMany()
         return {
-            props: {
-                athletes: allAthletes
-            }
+            props: { allAthletes }
         }
     } catch (e) {
         console.error(e)
