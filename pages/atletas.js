@@ -3,12 +3,13 @@ import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import AddAthlete from '../components/AddAthlete';
 import EditAthlete from '../components/EditAthlete';
+import Atletas from '../components/Atletas';
 import { useRouter } from 'next/router';
 
 
 const prisma = new PrismaClient()
 
-function Atletas(props) {
+export default function atletas(props) {
     useEffect(() => {
         const athletes = props.athletes
     },[])
@@ -167,7 +168,7 @@ function Atletas(props) {
     //     );
 
     return (
-        <h1>atletas</h1>
+        <Atletas />
     );
 }
 
@@ -184,5 +185,3 @@ export async function getServerSideProps() {
     }
 
 }
-
-export default Atletas
