@@ -9,10 +9,8 @@ import { useRouter } from 'next/router';
 
 const prisma = new PrismaClient()
 
-export default function atletas(props) {
-    useEffect(() => {
-        const athletes = props.athletes
-    },[])
+export default function atletas(props) {    
+    const athletes = props.athletes    
     // const [disable, setDisable] = useState(false)
     // const [logged, setLogged] = useState(false)
     // const [errorLogged, setErrorLogged] = useState(null)
