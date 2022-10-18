@@ -1,5 +1,8 @@
-export default function Atletas(){
-    return(
-        <h1>Atletas</h1>
+export default function Atletas() {
+    return (
+        <div>
+            <h1>Atletas</h1>
+            <p>prueba</p>
+        </div>
     );
 }
