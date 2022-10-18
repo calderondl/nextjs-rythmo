@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 const prisma = new PrismaClient()
 
-export default function Atletas(props) {
+function Atletas(props) {
     useEffect(() => {
         const athletes = props.athletes
     },[])
@@ -184,3 +184,5 @@ export async function getServerSideProps() {
     }
 
 }
+
+export default Atletas
