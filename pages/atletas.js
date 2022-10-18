@@ -9,13 +9,15 @@ import { useRouter } from 'next/router';
 const prisma = new PrismaClient()
 
 export default function Atletas(props) {
+    useEffect(() => {
+        const athletes = props.athletes
+    },[])
     // const [disable, setDisable] = useState(false)
     // const [logged, setLogged] = useState(false)
     // const [errorLogged, setErrorLogged] = useState(null)
     // const [showAddAthleteModal, setShowAddAthleteModal] = useState(false)
     // const [showEditAthleteModal, setShowEditthleteModal] = useState(false)
-    // const [currentAthlete, setCurrentAthlete] = useState(null)
-    // const athletes = props.athletes
+    // const [currentAthlete, setCurrentAthlete] = useState(null)    
     // const router = useRouter()
     // const formRef = useRef()
 
@@ -170,7 +172,6 @@ export default function Atletas(props) {
 }
 
 export async function getServerSideProps() {
-
     try {
         const allAthletes = await prisma.athlete.findMany()
         return {
