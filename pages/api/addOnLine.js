@@ -7,7 +7,8 @@ export default async (req, res)=>{
     try {
         const result = await prisma.onLine.create ({
           data: {
-            spotifyid: data.spotifyid
+            spotifyid: data.spotifyid,
+            token: data.token            
           },
         })
         res.status(200).json(result)

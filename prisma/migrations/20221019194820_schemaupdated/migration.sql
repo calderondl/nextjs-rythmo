@@ -23,5 +23,8 @@ CREATE TABLE "Admin" (
 
 -- CreateTable
 CREATE TABLE "onLine" (
-    "spotifyid" TEXT NOT NULL PRIMARY KEY
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "spotifyid" TEXT NOT NULL,
+    "token" TEXT NOT NULL,
+    "ingreso" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );

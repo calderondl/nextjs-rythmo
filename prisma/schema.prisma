@@ -29,5 +29,8 @@ model Admin {
 }
 
 model onLine {
-  spotifyid String @id
+  id        String @id @default(uuid())
+  spotifyid String
+  token     String
+  ingreso   DateTime @default(now())
 }

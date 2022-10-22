@@ -5,7 +5,7 @@ const prisma = new PrismaClient()
 export default async (req, res)=>{
     const data = req.body
     try {
-        const result = await prisma.onLine.delete({
+        const result = await prisma.onLine.deleteMany({
           where: {
             spotifyid: data.spotifyid
           },
